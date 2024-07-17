@@ -3,11 +3,6 @@
 <head>
 	<title>you're home</title>
 	<link rel="icon" type="image/x-icon" href="./assets/zzz.ico">
-	<script>
-		if(/Windows|Macintosh|Linux/.test(navigator.userAgent)) {
-    		window.location.href ="./index.html";
-		}
-	</script>
 </head>
 <style>
 	html, body {
@@ -17,6 +12,7 @@
 	}
 
 	body{
+		overflow: hidden;
 		background-color: #000000;
 	}
 
@@ -24,7 +20,7 @@
 		display: flex;
 		justify-content: center;
 		align-items: center;
-		height: 35vh;
+		height: 30vh;
 		zoom: 200%;
 	}
 
@@ -34,7 +30,8 @@
 		font-weight: bold;
 		font-size: 320%;
 		text-align: center;
-		margin-top: -45%;
+		margin-top: -30%;
+		padding-top: 20px;
 	}
 
 	a:link{
@@ -61,10 +58,16 @@
 	.link h2{
 		display: inline-block;
 		font-size: 350%;
-		margin: 30px 0;	}
+		margin: 30px 0;
+	}
 
+	.desktop{
+		font-family: "Arial";
+		text-align: center;
+	}
 </style>
 <body>
+	<h2 class="desktop"><a href="./index.html">desktop version</a></h2>
 	<div class="img">
 		<img src="./assets/me.png" alt="me">
 	</div>
