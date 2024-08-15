@@ -1,13 +1,32 @@
 <!DOCTYPE html>
 <html lang="en-us">
 <head>
-<title>home</title>
-	<link rel="icon" type="image/x-icon" href="./favicon.ico">
+    <title>home</title>
+    <link rel="icon" type="image/x-icon" href="./favicon.ico">
 </head>
 <style>
-	body {
-		background-image: url(./home.png);
-		background-size: cover
+    body {
+        background-image: url(./home.png);
+        background-size: cover;
+    }
+	.clock{
+		position: absolute;
+		bottom: 0;
+		right: 0;
+		font-family: "Arial";
+		font-size: 5vh;
+		color: white;
 	}
-	</style>
+</style>
+<body>
+    <div id="clock" class="clock"></div>
+    <script> /*still tryna study JS without swearing every 5s*/
+        function updateClock() {
+            var now = new Date();
+            var unixTime = Math.floor(now.getTime() / 1000);
+            document.getElementById('clock').innerHTML = unixTime;
+        }
+        setInterval(updateClock, 1000);
+    </script>
+</body>
 </html>
